@@ -377,8 +377,7 @@ vCUBE1#more flash:map.cfg
 ## Appendix
 ### Result of Not Reloading the Modified File
 The following is what occurs when the local e164-pattern-map file is edited but subsequently NOT reloaded into the router's memory.
-
-The initial file has existing entries, and the router is aware of their presence in the raw file via flash: as well as the existence of valid dial plan numbers.
+The initial file has existing entries and the router is aware of their presence in the raw file via flash: as well as the existence of valid dial plan numbers.
 
 ```javascript
 vCUBE1#more flash:map.cfg
@@ -474,7 +473,7 @@ VoiceOverIpPeer1
 peer type = voice, system default peer = FALSE, information type = voice,
 # /output omitted for brevity/
 ```
-Carriage Returns are Acceptable in a Pattern-Map
+#### Carriage Returns are Acceptable in a Pattern-Map
 In the following output, the pattern map is valid even though viewing it from the flash directly displays empty lines.
 
 ```javascript
@@ -509,8 +508,3 @@ vCUBE1#more flash:map.cfg
 
 vCUBE1#
 ```
-
-
-
-
-
