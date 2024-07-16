@@ -46,14 +46,12 @@ This document provides a detailed overview of utilizing Tool Command Language (T
 - Commands referenced in the body of this document are denoted by **`name`**.
 - Please see inline script #comments as well as the explanation of process steps.
 
-**IMPORTANT:**
-
-After modifying a pattern-map file, reload the file using:
-```javascript
-voice class e164-pattern-map load <pattern-map-group-id>
-```
-
-Please see the appendix for an example of what occurs when this is not performed after editing the file.
+> [!Important]
+> After modifying a pattern-map file, reload the file using:
+>```javascript
+>voice class e164-pattern-map load <pattern-map-group-id>
+>```
+>Please see the appendix for a detailed example of what occurs when this is not performed.
 
 ## Create Initial Pattern-Map File and Load into Memory
 ```javascript
