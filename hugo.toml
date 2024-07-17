@@ -11,7 +11,7 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
-#googleAnalytics = "XXX"
+googleAnalytics = "G-XC9S15QS4V"
 
 [Params]
 homeTitle = "Profit's Blog" # Set a different text for the header on the home page
