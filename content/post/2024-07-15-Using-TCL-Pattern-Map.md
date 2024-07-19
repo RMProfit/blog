@@ -1,6 +1,6 @@
 +++
 title = 'Using TCL to Update E164 Pattern Maps'
-date = 2024-07-13
+date = 2024-07-18
 draft = false
 tags= ["CUBE", "TCL"]
 +++
@@ -30,6 +30,7 @@ tags= ["CUBE", "TCL"]
         - [Example: Removing Multiple Lines from a File](#example-removing-multiple-lines-from-a-file)
   - [Appendix](#appendix)
     - [Result of Not Reloading the Modified File](#result-of-not-reloading-the-modified-file)
+      - [Carriage Returns are Acceptable in a Pattern-Map](#carriage-returns-are-acceptable-in-a-pattern-map)
 
 ## Introduction
 
