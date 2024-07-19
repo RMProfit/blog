@@ -7,6 +7,8 @@ tags= ["CUBE", "TCL"]
 
 # Using TCL for E164-Pattern-Map Modification
 
+This document details using Tool Command Language (TCL) for managing dynamic E164-pattern-maps on routers, focusing on migration scenarios with frequent, noncontiguous number block changes. It outlines syntax and methodologies to optimize handling these updates, ensuring seamless modifications during transitions.
+
 ## Contents
 - [Using TCL for E164-Pattern-Map Modification](#using-tcl-for-e164-pattern-map-modification)
   - [Contents](#contents)
