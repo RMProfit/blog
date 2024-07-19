@@ -5,37 +5,34 @@ draft = false
 tags= ["CUBE", "TCL", "script"]
 +++
 
-# Using TCL for E164-Pattern-Map Modification
-
 This document details using Tool Command Language (TCL) to manage dynamic E164-pattern-maps on routers during migrations, optimizing updates for seamless transitions.
 
 <!--more-->
 
 ## Contents
-- [Using TCL for E164-Pattern-Map Modification](#using-tcl-for-e164-pattern-map-modification)
-  - [Contents](#contents)
-  - [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Components Used](#components-used)
-      - [Important](#important)
-  - [Create Initial Pattern-Map File and Load into Memory](#create-initial-pattern-map-file-and-load-into-memory)
-        - [Detailed Explanation](#detailed-explanation)
-      - [File Creation Example with Data](#file-creation-example-with-data)
-      - [Append Data to an Existing File](#append-data-to-an-existing-file)
-      - [Example: Create the File and Remove a Single Line or Pattern](#example-create-the-file-and-remove-a-single-line-or-pattern)
-        - [Creating the file](#creating-the-file)
-      - [Removing a Single Line from the File](#removing-a-single-line-from-the-file)
-      - [Removing Entries](#removing-entries)
-        - [Remove a Single Line from an Existing File](#remove-a-single-line-from-an-existing-file)
-        - [Detailed Explanation](#detailed-explanation-1)
-      - [Remove Multiple Single Entries](#remove-multiple-single-entries)
-        - [Detailed Explanation](#detailed-explanation-2)
-      - [Use RegEx to Match Multiple Numbers](#use-regex-to-match-multiple-numbers)
-      - [Match an Entry with Wild Cards Present](#match-an-entry-with-wild-cards-present)
-        - [Example: Removing Multiple Lines from a File](#example-removing-multiple-lines-from-a-file)
-  - [Appendix](#appendix)
-    - [Result of Not Reloading the Modified File](#result-of-not-reloading-the-modified-file)
-      - [Carriage Returns are Acceptable in a Pattern-Map](#carriage-returns-are-acceptable-in-a-pattern-map)
+- [Contents](#contents)
+- [Introduction](#introduction)
+- [Prerequisites](#prerequisites)
+- [Components Used](#components-used)
+    - [Important](#important)
+- [Create Initial Pattern-Map File and Load into Memory](#create-initial-pattern-map-file-and-load-into-memory)
+      - [Detailed Explanation](#detailed-explanation)
+    - [File Creation Example with Data](#file-creation-example-with-data)
+    - [Append Data to an Existing File](#append-data-to-an-existing-file)
+    - [Example: Create the File and Remove a Single Line or Pattern](#example-create-the-file-and-remove-a-single-line-or-pattern)
+      - [Creating the file](#creating-the-file)
+    - [Removing a Single Line from the File](#removing-a-single-line-from-the-file)
+    - [Removing Entries](#removing-entries)
+      - [Remove a Single Line from an Existing File](#remove-a-single-line-from-an-existing-file)
+      - [Detailed Explanation](#detailed-explanation-1)
+    - [Remove Multiple Single Entries](#remove-multiple-single-entries)
+      - [Detailed Explanation](#detailed-explanation-2)
+    - [Use RegEx to Match Multiple Numbers](#use-regex-to-match-multiple-numbers)
+    - [Match an Entry with Wild Cards Present](#match-an-entry-with-wild-cards-present)
+      - [Example: Removing Multiple Lines from a File](#example-removing-multiple-lines-from-a-file)
+- [Appendix](#appendix)
+  - [Result of Not Reloading the Modified File](#result-of-not-reloading-the-modified-file)
+    - [Carriage Returns are Acceptable in a Pattern-Map](#carriage-returns-are-acceptable-in-a-pattern-map)
 
 ## Introduction
 
