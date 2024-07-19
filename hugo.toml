@@ -1,4 +1,4 @@
-baseurl = "https://rmprofit.github.io/blog/"
+baseurl = "https://rmprofit.github.io/"
 DefaultContentLanguage = "en"
 title = "Profit's Blog"
 # Using theme as git submodule 
