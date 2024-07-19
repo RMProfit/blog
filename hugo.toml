@@ -82,7 +82,7 @@ email = "robert.profit82@gmail.com"
 
 [[menu.main]]
     name = "Home"
-    url = ""
+    url = "robertmprofit.com"
     weight = 1
 
 #[[menu.main]]
