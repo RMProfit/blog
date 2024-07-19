@@ -4,7 +4,9 @@ subtitle:
 comments: false
 ---
 
-My name is Robert Profit. I have been in the IT field for close to 20 years now.
+Hello there!
+
+My name is Robert Profit and I have been in the IT field for close to 20 years now.
 First serving in the U.S. Army in communications supporting radios and phones. Later on, supporting routers, switches, and Cisco's Call Manager.
 
 Afterwards, I became a Network Engineer supporting communications systems integration and teaching quarterly classes on CCNP level Route-Switch and Voice topics.
