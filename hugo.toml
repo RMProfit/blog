@@ -2,9 +2,9 @@ baseurl = "https://rmprofit.github.io/blog/"
 DefaultContentLanguage = "en"
 title = "Profit's Blog"
 # Using theme as git submodule 
-theme = "beautifulhugo"
+#theme = "beautifulhugo"
 # Or when using theme as hugo module
-# theme = "github.com/halogenica/beautifulhugo"
+theme = "github.com/halogenica/beautifulhugo"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
