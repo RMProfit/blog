@@ -85,7 +85,7 @@ linkedin = "robert-profit-a63b0785"
 
 [[menu.main]]
     name = "Home"
-    url = "https://robertmprofit.com"
+    url = ""
     weight = 1
 
 #[[menu.main]]
