@@ -84,8 +84,8 @@ url bootflash:filename.cfg
 voice class e164-pattern-map load 3
 ```
 ##### Detailed Explanation
-File Handling: The file is opened, and the handle is stored in a variable **$file_handle**. This is crucial for managing file operations correctly.
-Writing to the File: Uses puts with the file handle to write data into the file. Replace <paste in list> with the actual data you want to write.
+File Handling: The file is opened, and the handle is stored in a variable **$file_handle**. This is crucial for managing file operations correctly.  
+Writing to the File: Uses puts with the file handle to write data into the file. Replace `paste in list` with the actual data you want to write.  
 Closing the File: It's important to close the file handle with close to flush the buffer and ensure all data is properly written to the flash memory.
 Exiting TCL: The command tclquit is used to correctly exit the TCL interpreter.
 
@@ -223,10 +223,10 @@ close $file_handle
 tclquit
 ```
 ##### Detailed Explanation
-Patterns List: You define a list of strings **$patterns**. Each element in the list represents a pattern that you want to filter out from the file.
-Reading the File: Open the file, read its contents into **$file_contents**, and close the file.
-Filtering Process: Split the file contents into lines. For each line, check against each pattern in the list. If any pattern matches, mark the line to be excluded with **include_line set to 0**.
-Reconstruction: After filtering, the remaining lines $new_lines are joined back into a single string and written back to the file, overwriting the previous content.
+Patterns List: You define a list of strings `$patterns`. Each element in the list represents a pattern that you want to filter out from the file.  
+Reading the File: Open the file, read its contents into `$file_contents`, and close the file.  
+Filtering Process: Split the file contents into lines. For each line, check against each pattern in the list. If any pattern matches, mark the line to be excluded with `include_line set to 0`.  
+Reconstruction: After filtering, the remaining lines $new_lines are joined back into a single string and written back to the file, overwriting the previous content.  
 Performance Consideration: This method is straightforward and effective for small to medium-sized files. For very large files, consider processing in chunks.
 
 #### Remove Multiple Single Entries
@@ -280,8 +280,8 @@ tclquit
 
 ##### Detailed Explanation
 Patterns List: The patterns are defined as a list of strings $patterns. This is a straightforward way to store multiple patterns that need to be removed.
-Loop Through Each Line: For each line in the file, a nested loop checks each pattern against the current line.
-Filtering: The inner loop stops checking patterns for the current line once a match is found, setting **include_line to 0**. Only lines that aren't matched by any pattern are appended to **$new_lines**.
+Loop Through Each Line: For each line in the file, a nested loop checks each pattern against the current line.  
+Filtering: The inner loop stops checking patterns for the current line once a match is found, setting `include_line to 0`. Only lines that aren't matched by any pattern are appended to `$new_lines`.  
 Reconstruction: The remaining lines are joined back into a single string and written back to the file.
 
 #### Use RegEx to Match Multiple Numbers
