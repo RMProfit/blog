@@ -2,12 +2,14 @@
 title = 'Using TCL to Update E164 Pattern Maps'
 date = 2024-07-18
 draft = false
-tags= ["CUBE", "TCL"]
+tags= ["CUBE", "TCL", "script"]
 +++
 
 # Using TCL for E164-Pattern-Map Modification
 
 This document details using Tool Command Language (TCL) to manage dynamic E164-pattern-maps on routers during migrations, optimizing updates for seamless transitions.
+
+<!--more-->
 
 ## Contents
 - [Using TCL for E164-Pattern-Map Modification](#using-tcl-for-e164-pattern-map-modification)
