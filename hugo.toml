@@ -92,7 +92,7 @@ email = "robert.profit82@gmail.com"
 
 [[menu.main]]
     name = "About"
-    url = "page/about"
+    url = "content/page/about"
     weight = 2
 
 #[[menu.main]]
