@@ -84,10 +84,10 @@ url bootflash:filename.cfg
 voice class e164-pattern-map load 3
 ```
 ##### Detailed Explanation
-File Handling: The file is opened, and the handle is stored in a variable **$file_handle**. This is crucial for managing file operations correctly.  
-Writing to the File: Uses puts with the file handle to write data into the file. Replace `paste in list` with the actual data you want to write.  
-Closing the File: It's important to close the file handle with close to flush the buffer and ensure all data is properly written to the flash memory.
-Exiting TCL: The command tclquit is used to correctly exit the TCL interpreter.
+__File Handling__: The file is opened, and the handle is stored in a variable **$file_handle**. This is crucial for managing file operations correctly.  
+__Writing to the File__: Uses puts with the file handle to write data into the file. Replace `paste in list` with the actual data you want to write.  
+__Closing the File__: It's important to close the file handle with close to flush the buffer and ensure all data is properly written to the flash memory.
+__Exiting TCL__: The command tclquit is used to correctly exit the TCL interpreter.
 
 #### File Creation Example with Data
 ```javascript
