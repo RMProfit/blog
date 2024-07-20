@@ -230,7 +230,7 @@ tclquit
 **Performance Consideration**: This method is straightforward and effective for small to medium-sized files. For very large files, consider processing in chunks.
 
 #### Remove Multiple Single Entries
-Note: Due to the CLI character buffer limitation, longer lists of patterns to be removed must have the set patterns command broken up after approximately 18 ten-digit numbers. You can achieve this by inserting carriage returns to distribute the numbers across multiple lines while setting the $patterns variable.
+Due to the CLI character buffer limitation, longer lists of patterns to be removed must have the set patterns command broken up after approximately 18 ten-digit numbers. You can achieve this by inserting carriage returns to distribute the numbers across multiple lines while setting the $patterns variable.
 
 ```javascript
 tclsh
