@@ -20,7 +20,7 @@ googleAnalytics = "G-XC9S15QS4V"
 homeTitle = "Profit's Blog" # Set a different text for the header on the home page
 subtitle = "Unified Communications and other I.T. Things"
 mainSections = ["post","posts"]
-#logo = "img/avatar-icon.png" # Expecting square dimensions
+logo = "img/avatar-icon.png" # Expecting square dimensions
 #favicon = "img/favicon.ico"
 dateFormat = "January 2, 2006"
 commit = false
@@ -38,9 +38,9 @@ showRelatedPosts = true
 disclaimerText = "The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way."
 summaryLength = "35"
 
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
+# [[Params.bigimg]]
+# src = "img/draft_selfie.jpeg"
+# desc = "Author"
 #[[Params.bigimg]]
 #  src = "img/sphere.jpg"
 #  desc = "Sphere"
