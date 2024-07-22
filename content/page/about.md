@@ -11,7 +11,7 @@ First serving in the U.S. Army in communications supporting radios and phones. L
 
 Afterwards, I became a Network Engineer supporting communications systems integration and teaching quarterly classes on CCNP level Route-Switch and Voice topics.
 
-Now, I have been at Cisco close to nine years supporting their entire porfolio of Unified Communiciations solutions. This site is a place to document some of the features I have been implemented as well as any other corner case scenarios I have come across.
+Now, I have been at Cisco close to nine years supporting their entire porfolio of Unified Communiciations solutions. This site is a place to document some of the features I have been implemented as well as any other corner case scenarios I come across.
 
 I hope you find this useful....enjoy!
 
