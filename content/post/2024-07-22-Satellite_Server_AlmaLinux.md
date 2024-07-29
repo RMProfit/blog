@@ -15,7 +15,9 @@ As most of the other Cisco Unified Communications products are requiring migrati
 - [Migrated Settings](#migrated-settings)
 - [Prerequisites](#prerequisites)
   - [Upgrade Existing Version 8 Servers to 8-202404](#upgrade-existing-version-8-servers-to-8-202404)
+      - [Disregard HA steps if running a standalone server.](#disregard-ha-steps-if-running-a-standalone-server)
 - [Migration Steps](#migration-steps)
+      - [Disregard HA steps if running a standalone server.](#disregard-ha-steps-if-running-a-standalone-server-1)
 - [Post Migration Steps](#post-migration-steps)
 - [References](#references)
 
@@ -40,8 +42,9 @@ Target Version: **9-202406**
 
 ## Prerequisites
 ### Upgrade Existing Version 8 Servers to 8-202404
+##### Disregard HA steps if running a standalone server.
 1. Place upgrade files on both servers in patches folder `/var/files/patches`.
-2. Disable HA on cluster. 
+2. Disable HA on cluster.
 > Note: Browser certificates are deleted when the HA teardown command is used.  
 > * **onprem-console** 
 > * **ha_teardown**
@@ -51,6 +54,7 @@ Target Version: **9-202406**
 > *Note: Browser certificates may need to be re-uplaoded.*
 
 ## Migration Steps
+##### Disregard HA steps if running a standalone server.
 1. Disable HA on the source CentOS cluster.
 * **on-prem console**
 * **ha_teardown**
