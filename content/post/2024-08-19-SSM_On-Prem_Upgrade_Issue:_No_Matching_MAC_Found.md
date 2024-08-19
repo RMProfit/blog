@@ -59,7 +59,7 @@ Unable to negotiate with 192.168.0.98 port 22: no matching MAC found. Their offe
 
 You will now have to use an SFTP program like WinSCP to connect to SSM On-Prem and copy the upgrade files into the default Admin directory.
 
-![OnPrem File Directory](/images/onpremdirectory.png)
+![OnPrem File Directory](/content/post/images/onpremdirectory.png)
 
 Verify the files are present after first exiting out of the On-Prem Console and back to the Linux prompt. Once verified, they will have to be moved to the patches directory.
 
