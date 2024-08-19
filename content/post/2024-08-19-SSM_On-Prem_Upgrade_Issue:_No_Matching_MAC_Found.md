@@ -21,7 +21,7 @@ This document provides step-by-step instructions for upgrading Cisco's Smart Sof
 ## Overview
 This document contains steps to upgrade the Smart Software Manager (SSM) On-Prem when the Installation Guide steps as shown in the image taken from the Smart Software Manager On-Prem 8-202006 Installation Guide are unsuccessful.
 
-![installguidescreenshot.png](/post/images/guipostupgrade.png)
+![installguidescreenshot.png](./post/images/guipostupgrade.png)
 
 ## Caveats
 The SSM server must not be in Federal Information Processing Standard (FIPS) mode as there is no access to the Linux shell when this is enabled.
@@ -59,7 +59,7 @@ Unable to negotiate with 192.168.0.98 port 22: no matching MAC found. Their offe
 
 You will now have to use an SFTP program like WinSCP to connect to SSM On-Prem and copy the upgrade files into the default Admin directory.
 
-![OnPrem File Directory](/post/images/onpremdirectory.png)
+![OnPrem File Directory](./post/images/onpremdirectory.png)
 
 Verify the files are present after first exiting out of the On-Prem Console and back to the Linux prompt. Once verified, they will have to be moved to the patches directory.
 
