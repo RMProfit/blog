@@ -101,7 +101,7 @@ On-Prem version (current): 8-202102
 On-Prem version (ISO): 7-202001
 Patches installed: 8-202004 8-202006 8-202008 8-202010 8-202102
 ``` 
-![guipostupgrade]([./images/](https://github.com/RMProfit/blog/blob/main/content/post/images/guipostupgrade.png)
+![guipostupgrade](https://github.com/RMProfit/blog/blob/main/content/post/images/guipostupgrade.png)
 
 These steps have also been used to upgrade from 8-202102 to 8-202108.
 ```javascript
