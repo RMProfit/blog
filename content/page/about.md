@@ -6,12 +6,13 @@ comments: false
 
 Hello there!
 
-My name is Robert Profit and I have been in the IT field for close to 20 years now.
-First serving in the U.S. Army in communications supporting radios and phones. Later on, supporting routers, switches, and Cisco's Call Manager.
+Before joining Cisco, I spent several years as a network engineer supporting production environments and managing a training and test lab. This role afforded me the invaluable opportunity to lead a quarterly two-week course on Professional-level Route/Switch/UC topics.
 
-Afterwards, I became a Network Engineer supporting communications systems integration and teaching quarterly classes on CCNP level Route-Switch and Voice topics.
+Over the past nince years at Cisco, my role has spanned multiple networks and regions, where I've been responsible for the complete lifecycle of customer engagements—from demonstrating the potential of Cisco software management to securing follow-on orders. I've tested intricate configurations in a controlled lab setting and translated these solutions seamlessly to production environments.
 
-Now, I have been at Cisco close to nine years supporting their entire porfolio of Unified Communiciations solutions. This site is a place to document some of the features I have been implemented as well as any other corner case scenarios I come across.
+My practical experience extends across deploying, troubleshooting, and refining applications such as Call Manager, Instant Messaging, Voicemail, Contact Center, Emergency Responder, Expressways, and Cisco Meeting Server. I have also explored Webex Control Hub and Webex Contact Center through dCloud walkthroughs.
+
+This site is a place to document some of the features I have implemented as well as any other corner case scenarios I come across.
 
 I hope you find this useful....enjoy!
 
