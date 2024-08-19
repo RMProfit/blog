@@ -21,7 +21,7 @@ This document provides step-by-step instructions for upgrading Cisco's Smart Sof
 ## Overview
 This document contains steps to upgrade the Smart Software Manager (SSM) On-Prem when the Installation Guide steps as shown in the image taken from the Smart Software Manager On-Prem 8-202006 Installation Guide are unsuccessful.
 
-![installguidescreenshot.png](./post/images/installguide.png)
+![installguiscreenshot](./post/images/installguide.png)
 
 ## Caveats
 The SSM server must not be in Federal Information Processing Standard (FIPS) mode as there is no access to the Linux shell when this is enabled.
