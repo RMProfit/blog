@@ -59,7 +59,7 @@ Unable to negotiate with 192.168.0.98 port 22: no matching MAC found. Their offe
 
 You will now have to use an SFTP program like WinSCP to connect to SSM On-Prem and copy the upgrade files into the default Admin directory.
 
-![OnPrem File Directory](https://github.com/RMProfit/blog/blob/main/content/post/images/onpremdirectory.png)
+![OnPrem File Directory](https://github.com/RMPRofit/blog/blob/gh-pages/post/images/onpremdirectory.png?raw=true)
 
 Verify the files are present after first exiting out of the On-Prem Console and back to the Linux prompt. Once verified, they will have to be moved to the patches directory.
 
@@ -101,7 +101,7 @@ On-Prem version (current): 8-202102
 On-Prem version (ISO): 7-202001
 Patches installed: 8-202004 8-202006 8-202008 8-202010 8-202102
 ``` 
-![guipostupgrade](https://github.com/RMProfit/blog/blob/main/content/post/images/guipostupgrade.png)
+![guipostupgrade](https://github.com/RMPRofit/blog/blob/gh-pages/post/images/guipostupgrade.png?raw=true)
 
 These steps have also been used to upgrade from 8-202102 to 8-202108.
 ```javascript
