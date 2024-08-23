@@ -6,6 +6,7 @@ tags= ["licensing", "UC", "SSM"]
 +++
 
 This document provides step-by-step instructions for upgrading Cisco's Smart Software Manager (SSM) On-Prem from version 7-202001 to 8-202102, addressing common issues like Message Authentication Code (MAC) mismatches and using SFTP for file transfers.
+I wrote this a while back when running in to issues in lab and production environments and am finally posting in case others run in to this while preparing for their Alma Linux upgrades. See my other post for those upgrade steps.
 
 <!--more-->
 
