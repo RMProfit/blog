@@ -1,5 +1,5 @@
 +++
-title = 'Dial Peers Unencrypted Post XE Upgrade'
+title = 'Dial Peers Unencrypted Post Upgrade'
 date = 2025-01-17
 draft = false
 tags= ["CUBE", "Crypto", "UC", "SRTP"]
