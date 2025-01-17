@@ -1,8 +1,8 @@
 +++
 title = 'Dial Peers Unencrypted Post XE Upgrade'
-date = 2025-01-10
+date = 2025-01-17
 draft = false
-tags= ["CUBE", "Crypto", "UC"]
+tags= ["CUBE", "Crypto", "UC", "SRTP"]
 +++
 
 I ran in to an issue in a customer's production enviornment a few months back with a voice stream not negotiating Secure Real Time Transport Protocol (SRTP) even though it was configured correctly on the customer's edge router, or so we thought.
