@@ -1,6 +1,6 @@
 +++
 title = 'Unable to Call Forward All (CFA) from Phones'
-date = 2025-01-17
+date = 2025-02-01
 draft = false
 tags= ["CUCM", "UC", "Phones"]
 +++
