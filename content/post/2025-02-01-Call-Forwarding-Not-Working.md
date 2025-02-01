@@ -58,7 +58,7 @@ The core / backtrace matched what I had seen, and I was also able to confirm ano
 
 One of the workarounds is to remove devices from the network that are no longer in use. This had also happened recently to this customer environment. A lot of deprectaed phones were recently removed from the CUCM's database, but there is no gurantee they were also physically removed from the network in the various locations.  
 
-In this case, the large quantity of phones are continuously sending registration messages and eventually starving out the SDL queue. This causes User Facing Features (UFF) like call forwarding to not be processed by the server and 'mot work'.
+In this case, the large quantity of phones are continuously sending registration messages and eventually starving out the Signal Distribution Layer (SDL) queue. This causes User Facing Features (UFF) like call forwarding to not be processed by the server and 'mot work'.
 
 The path of least resistance was to patch/upgrade the servers to 14SU4 instead attempting to verify devices had been removed from the network. The 14SU4 patch modified the error handling of the SDL queue.
 
