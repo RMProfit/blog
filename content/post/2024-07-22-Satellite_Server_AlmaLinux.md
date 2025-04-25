@@ -31,6 +31,8 @@ Target Version: **9-202406**
 
 
 ## Migrated Settings
+*(Edited on 25 April 2025: The migration script and its SHA256 file are provided as part of the SSM OnPrem **9-202406** release ZIP file.)*  
+
 * Network Configuration: This includes existing firewall zones and Custom routes of the interfaces if any. This will cover all the network configurations documented as part of SSM On-prem documentation, like ipv6 and dual NIC and so on.  
 * TACACS+ Cli configuration (including the TACACS+ users and their roles).
 * Docker network configurations (configured through On-prem console option).
@@ -56,7 +58,7 @@ Target Version: **9-202406**
 1. Disable HA on the source CentOS cluster.
 * **on-prem console**
 * **ha_teardown**
-2. Place migration script on primary source server in patches folder `/var/files/patches`.
+2. Place migration script on primary source server in patches folder `/var/files/patches`. *(Included in **9-202406** release ZIP file.)*
    * **migrate_configs.sh  and migrate_configs.sh.sha256**
 3. Run migration script.
    * **upgrade patches:migrate_configs.sh**
