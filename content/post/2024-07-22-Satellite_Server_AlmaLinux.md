@@ -67,7 +67,7 @@ Target Version: **9-202406**
 5. Shut down source server(s) after new servers are staged.
 6. Finish deployment on new (Alma Linux) server(s) with the exact same IP, Subnet, Gateway, and DNS as previous (CentOS) server.
 7. Copy backup file to `/var/files/backups`.
-8. Copy migration script files in folder `/var/files/patches` on new Alma Linux Server.
+8. Copy migration script files to `/var/files/patches` on new Alma Linux Server.
 9. Run the migration script on new Alma Linuxserver.
    * **on-prem console**
    * **upgrade patches:migrate_configs.sh**
