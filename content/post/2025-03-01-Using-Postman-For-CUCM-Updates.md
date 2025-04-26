@@ -1,7 +1,7 @@
 +++
-title = 'U'
-date = 2025-03-01
-draft = false
+title = 'Modifying Groups of Phones'
+date = 2025-05-01
+draft = true
 tags= ["CUCM", "UC", "Postman","API","DevNet"]
 +++
 
