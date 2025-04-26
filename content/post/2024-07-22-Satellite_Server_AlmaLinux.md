@@ -67,14 +67,15 @@ Target Version: **9-202406**
 5. Shut down source server(s) after new servers are staged.
 6. Finish deployment on new (Alma Linux) server(s) with the exact same IP, Subnet, Gateway, and DNS as previous (CentOS) server.
 7. Copy backup file to `/var/files/backups`.
-8. Run the migration script on new Alma Linuxserver.
+8. Copy migration script files in folder `/var/files/patches` on new Alma Linux Server.
+9. Run the migration script on new Alma Linuxserver.
    * **on-prem console**
    * **upgrade patches:migrate_configs.sh**
-9. Enter the name of the migration file when prompted.
-10. After successful script execution, the server reboots.
-11. Deploy secondary Alma Linux server.
+10. Enter the name of the migration file when prompted.
+11. After successful script execution, the server reboots.
+12. Deploy secondary Alma Linux server.
 * Enabling HA will copy over the primary server’s database to secondary.
-12. Enable HA on cluster.
+13. Enable HA on cluster.
 * Server 1: **onprem-console** -> **ha_generate keys**
 * Server 2: **onprem-console** -> **ha_provision_standby**
 * Server 1: **onprem-console** -> **ha_deploy**
