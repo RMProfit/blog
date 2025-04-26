@@ -1,3 +1,4 @@
+### Repo --> Runner Setup --> Install Hugo 0.124.1 --> Verify Installed Hugo Version --> Build Site (Hugo + Theme)
 ---
 name: Deploy Hugo site via GitHub Pages
 
@@ -24,6 +25,27 @@ jobs:
         with:
           hugo-version: "0.124.1"
           extended: true
+
+      - name: Verify Hugo version (Flexible Check)
+        run: |
+          echo "Checking Hugo version..."
+          hugo version
+
+          MINIMUM_REQUIRED_VERSION="0.124.1"
+          INSTALLED_VERSION=$(hugo version | grep -oP '(?<=v)[0-9]+\.[0-9]+\.[0-9]+')
+
+          echo "Installed Hugo version: $INSTALLED_VERSION"
+          echo "Minimum required version: $MINIMUM_REQUIRED_VERSION"
+
+          min_version_int=$(echo "$MINIMUM_REQUIRED_VERSION" | awk -F. '{ printf("%d%03d%03d\n", $1,$2,$3); }')
+          installed_version_int=$(echo "$INSTALLED_VERSION" | awk -F. '{ printf("%d%03d%03d\n", $1,$2,$3); }')
+
+          if [ "$installed_version_int" -lt "$min_version_int" ]; then
+            echo "ERROR: Installed Hugo version ($INSTALLED_VERSION) is lower than the required minimum ($MINIMUM_REQUIRED_VERSION)."
+            exit 1
+          else
+            echo "Hugo version check passed."
+          fi
 
       - name: Build
         run: hugo --minify
