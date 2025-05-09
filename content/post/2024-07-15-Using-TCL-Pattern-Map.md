@@ -2,7 +2,7 @@
 title = 'Using TCL to Update E164 Pattern Maps'
 date = 2024-07-19
 draft = false
-tags= ["CUBE", "TCL", "script"]
+tags= ["CUBE", "TCL", "script","Automation"]
 +++
 
 
