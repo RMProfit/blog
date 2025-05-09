@@ -5,7 +5,7 @@ draft = false
 tags= ["CUCM", "UC", "Phones"]
 +++
 
-Issues in production are the gifts that keep on giving. Another strange one to look at as phones were unable to perform Call Fortwarding All (CFA) from phones, depending on which server they were registered to.
+Issues in production are the gifts that keep on giving. Another strange one to look at as phones were unable to perform Call Forwarding All (CFA) from phones, depending on which server they were registered to.
 
 <!--more-->
 
