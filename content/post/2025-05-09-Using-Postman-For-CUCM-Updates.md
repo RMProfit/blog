@@ -118,7 +118,7 @@ Multiple variables can be used within Postman and the CSV file making this tool 
 ```
 The CSV is updated accordingly.
 
-![multi_var_excel](https://github.com/RMProfit/blog/blob/main/content/post/images/multi_var_excel.png?raw=true)  
+![multi_var_excel](https://github.com/RMProfit/blog/blob/main/content/post/images/multi_var_excel.png?raw=true)
 
  A video walkthrough of this example can be found at the link below.  
 
