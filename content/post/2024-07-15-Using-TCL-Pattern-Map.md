@@ -59,9 +59,8 @@ This document provides a detailed overview of utilizing Tool Command Language (T
 
 ## Create Initial Pattern-Map File and Load into Memory
 ```javascript
-To create a pattern-map file that exists on the flash: of the router without having to re-import via scp or tftp:
-```tcl
-tclsh
+# To create a pattern-map file that exists on the flash: of the router without having to re-import via scp or tftp:
+
 # Open the file in write-append mode and assign it to a variable
 set file_handle [open "flash:filename.cfg" w+]
 
