@@ -92,13 +92,14 @@ Here is our updated syntax:
 Next, we need to prepare our Postman environment. Configure your specific environment variables or global variables.
 
 ![postman_variables](https://github.com/RMProfit/blog/blob/main/content/post/images/postman_variables.png?raw=true)
+
 Create your CSV file with the same variable used in the API call and the Postman environment. The first cell in a column will be the variable and the rest of the cells in that column will be the different possbilities of the variable. Or, in other words, what DNs we want to modify.
 
 ![single_var_excel](https://github.com/RMProfit/blog/blob/main/content/post/images/single_var_excel.png?raw=true)
 
 Next we will open the "Runner Tab" in Postman and select our CSV seed file. We can also configure a delay, in the event you are modifying thousands of DNs or objects against a server, as to not overrun it.  
 
-![runner_tab](https://github.com/RMProfit/blog/blob/main/content/post/images/runner_tab.png?raw=true)
+![runner_tab](https://github.com/RMProfit/blog/blob/main/content/post/images/runner_tab.png?raw=true)  
 
 You can also preview the uploaded CSV and review it was read correctly by Postman.  
 ![runner_preview](https://github.com/RMProfit/blog/blob/main/content/post/images/runner_preview.png?raw=true)
