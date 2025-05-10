@@ -36,7 +36,7 @@ The information in this document is based on these software versions:
 While I will not get in to all the specifics of API calls in this post, we can cover the high level information that is required of us.
 Verify you have proper API user credentials defined on the target CUCM system and that your Headers are defined like the following:  
 
-![postman_headers](https://github.com/RMProfit/blog/blob/main/content/post/images/postman_headers.png?raw=true) 
+![postman_headers](/post/images/postman_headers.png) 
 
 *Note that you may need to disable SSL certificate checking for a successful authentication.*
 
@@ -89,7 +89,8 @@ Here is our updated syntax:
 ```
 
 
-Next, we need to prepare our Postman environment. Configure your specific environment variables or global variables.
+Next, we need to prepare our Postman environment. Configure your specific environment variables or global variables.  
+
 
 ![postman_variables](https://github.com/RMProfit/blog/blob/main/content/post/images/postman_variables.png?raw=true)
 
