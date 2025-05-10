@@ -96,14 +96,14 @@ Next, we need to prepare our Postman environment. Configure your specific enviro
 
 Create your CSV file with the same variable used in the API call and the Postman environment. The first cell in a column will be the variable and the rest of the cells in that column will be the different possbilities of the variable. Or, in other words, what DNs we want to modify.
 
-![single_var_excel](/images/single_var_excel.png?raw=true)
+![single_var_excel](/images/single_var_excel.png)
 
 Next we will open the "Runner Tab" in Postman and select our CSV seed file. We can also configure a delay, in the event you are modifying thousands of DNs or objects against a server, as to not overrun it.  
 
 ![runner_tab](/images/runner_tab.png?raw=true)  
 
 You can also preview the uploaded CSV and review it was read correctly by Postman.  
-![runner_preview](/images/runner_preview.png?raw=true)
+![runner_preview](/images/runner_preview.png)
 
 Now, click **Run New Collection** and if all goes well, you should be greeted with *200 OK*s meaning it was successful.
 
@@ -119,7 +119,7 @@ Multiple variables can be used within Postman and the CSV file making this tool 
 ```
 The CSV is updated accordingly.
 
-![multi_var_excel](/images/multi_var_excel.png?raw=true)
+![multi_var_excel](/images/multi_var_excel.png)
 
  A video walkthrough of this example can be found at the link below.  
 
