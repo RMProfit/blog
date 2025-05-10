@@ -92,7 +92,7 @@ Here is our updated syntax:
 Next, we need to prepare our Postman environment. Configure your specific environment variables or global variables.  
 
 
-![postman_variables](https://github.com/RMProfit/blog/blob/main/content/post/images/postman_variables.png?raw=true)
+![postman_variables](post/images/postman_variables.png)
 
 Create your CSV file with the same variable used in the API call and the Postman environment. The first cell in a column will be the variable and the rest of the cells in that column will be the different possbilities of the variable. Or, in other words, what DNs we want to modify.
 
