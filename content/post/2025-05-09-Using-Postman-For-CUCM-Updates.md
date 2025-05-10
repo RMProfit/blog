@@ -36,7 +36,7 @@ The information in this document is based on these software versions:
 While I will not get in to all the specifics of API calls in this post, we can cover the high level information that is required of us.
 Verify you have proper API user credentials defined on the target CUCM system and that your Headers are defined like the following:  
 
-![postman_headers](/content/post/images/postman_headers.png) 
+![postman_headers](/images/postman_headers.png) 
 
 *Note that you may need to disable SSL certificate checking for a successful authentication.*
 
