@@ -47,46 +47,7 @@
 &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Robert Profit</span></p><div class=post-entry><p>This document details using Tool Command Language (TCL) for managing dynamic E164-pattern-maps on routers, focusing on migration scenarios with frequent, noncontiguous number block changes. It outlines syntax and methodologies to optimize handling these updates, ensuring seamless modifications during transitions.</p><a href=https://robertmprofit.com/post/2024-07-15-using-tcl-pattern-map/ class=post-read-more>[Read More]</a></div><div class=blog-tags><a href=https://robertmprofit.com/tags/cube/>CUBE</a>&nbsp;
 <a href=https://robertmprofit.com/tags/tcl/>TCL</a>&nbsp;
 <a href=https://robertmprofit.com/tags/script/>script</a>&nbsp;
-<a href=https://robertmprofit.com/tags/automation/>Automation</a>&nbsp;</div></article><article class=post-preview><a href=https://robertmprofit.com/post/blocking-numbers-with-e164-pattern-maps/><h2 class=post-title></h2></a><p class=post-meta><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;Posted on January 1, 0001
-&nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-&nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;123&nbsp;words
-&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Robert Profit</span></p><div class=post-entry><p>#Working Dial Peer</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>dial-peer voice 3000 voip
-</span></span><span class=line><span class=cl> description SIP from BT
-</span></span><span class=line><span class=cl> translation-profile incoming BT-Inbound-Translation
-</span></span><span class=line><span class=cl> preference 5
-</span></span><span class=line><span class=cl> session protocol sipv2
-</span></span><span class=line><span class=cl> answer-address .T
-</span></span><span class=line><span class=cl> voice-class codec 1  
-</span></span><span class=line><span class=cl> voice-class sip copy-list 3000
-</span></span><span class=line><span class=cl> voice-class sip bind control source-interface GigabitEthernet0/0/1
-</span></span><span class=line><span class=cl> voice-class sip bind media source-interface GigabitEthernet0/0/1
-</span></span><span class=line><span class=cl> voice-class sip audio forced
-</span></span><span class=line><span class=cl> dtmf-relay rtp-nte
-</span></span><span class=line><span class=cl> no vad
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>voice class e164-pattern-map 3001
-</span></span><span class=line><span class=cl> url http://&lt;server&gt;/pattern-map.cfg
-</span></span></code></pre></div><p>or</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>voice class e164-pattern-map 3001
-</span></span><span class=line><span class=cl> url http://&lt;server&gt;/pattern-map.txt
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>voice translation-rule 3001
-</span></span><span class=line><span class=cl> rule 1 reject /.*/
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>voice translation-profile BT-Inbound-CallBlock
-</span></span><span class=line><span class=cl> translate calling 3001
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>dial-peer voice 3002 voip
-</span></span><span class=line><span class=cl> description SIP from ISP
-</span></span><span class=line><span class=cl> translation-profile incoming BT-Inbound-Translation
-</span></span><span class=line><span class=cl> call-block translation-profile incoming BT-Inbound-CallBlock
-</span></span><span class=line><span class=cl> call-block disconnect-cause incoming call-reject
-</span></span><span class=line><span class=cl> session protocol sipv2
-</span></span><span class=line><span class=cl> incoming calling e164-pattern-map 3001
-</span></span><span class=line><span class=cl> voice-class codec 1  
-</span></span><span class=line><span class=cl> voice-class sip bind control source-interface GigabitEthernet0/0/1
-</span></span><span class=line><span class=cl> voice-class sip bind media source-interface GigabitEthernet0/0/1
-</span></span><span class=line><span class=cl> voice-class sip audio forced
-</span></span><span class=line><span class=cl> dtmf-relay rtp-nte
-</span></span><span class=line><span class=cl> no vad
-</span></span></code></pre></div></div></article></div></div></div></div><div class=page-meta></div><footer><div class=container><div class=row><div class=disclaimer><b>Disclaimer:</b> The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</div></div><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=mailto:robert.profit82@gmail.com title="Email me"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<a href=https://robertmprofit.com/tags/automation/>Automation</a>&nbsp;</div></article></div></div></div></div><div class=page-meta></div><footer><div class=container><div class=row><div class=disclaimer><b>Disclaimer:</b> The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way.</div></div><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=mailto:robert.profit82@gmail.com title="Email me"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
 <i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://github.com/RMProfit title=GitHub><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
 <i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://linkedin.com/in/robert-profit-a63b0785 title=LinkedIn><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
 <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://www.youtube.com/@robertprofit82 title=Youtube><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
