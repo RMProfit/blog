@@ -76,7 +76,7 @@ Target Version: **9-202406**
 12. Deploy secondary Alma Linux server.
 * Enabling HA will copy over the primary server’s database to secondary.
 13. Enable HA on cluster.
-* Server 1: **onprem-console** -> **ha_generate keys**
+* Server 1: **onprem-console** -> **ha_generatekeys**
 * Server 2: **onprem-console** -> **ha_provision_standby**
 * Server 1: **onprem-console** -> **ha_deploy**
 
