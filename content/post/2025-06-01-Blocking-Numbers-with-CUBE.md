@@ -1,5 +1,5 @@
 +++
-title ='Blocking Numbers with e164 Pattern Map'
+title ='Blocking Numbers with CUBE'
 date = 2025-06-01
 draft = true
 tags= ["CUBE", "UC"]
