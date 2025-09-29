@@ -6,9 +6,11 @@ tags= ["CUBE", "UC"]
 +++
 
 
-#Inesert introduction here.
+#Insert introduction here.
+Long ago, one may have recieved a spam call maybe once a month. Advancing technology introduced robo calling and number spoofing. The abilty to automate unsolicited calls for marekting or spam and the  
+ability to hide or change the caller ID of the number you are calling, respectively. This post will cover an easy way at blocking those calls from your network.   
+<!--more-->  
 
-<!--more-->
 
 ## Contents
 - [Contents](#contents)
@@ -18,7 +20,13 @@ tags= ["CUBE", "UC"]
 - [Verification](#verification)
 - [References](#references)
 
+## Overview
+This post is to demonstrate a way of blocking unsolicited calls at your gateway before they enter your network. It is true they can be blocked on CUCM with some strategic route patterns in CUCM. The issue with that is the traffic is already in your system and now the overhead of dropping that traffic falls on your CUCM system. A better solution is to block this traffic at your gateway before the calls enter your network.
 
+## Components Used
+## Configuration
+## Verification
+## References
 
 #Working Dial Peer
 ```
