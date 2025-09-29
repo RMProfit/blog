@@ -21,13 +21,12 @@ ability to hide or change the caller ID of the number you are calling, respectiv
 - [References](#references)
 
 ## Overview
-This post is to demonstrate a way of blocking unsolicited calls at your gateway before they enter your network. It is true they can be blocked on CUCM with some strategic route patterns in CUCM. The issue with that is the traffic is already in your system and now the overhead of dropping that traffic falls on your CUCM system. A better solution is to block this traffic at your gateway before the calls enter your network.
+This post is to demonstrate a way of blocking unsolicited calls at your gateway before they enter your network. While these calls can be blocked on CUCM with some strategic partition, calling search space, and route pattern configurations, the issue is at that point the traffic is already in your system. The overhead of dropping that traffic on falls on your CUCM with a high probability of causing a DoS event to your users. A better solution is to block this traffic at your gateway before the calls enter your network.
 
 ## Components Used
-## Configuration
-## Verification
-## References
+This configuration can be implemented on Cisco routers running CUBE.
 
+## Configuration
 #Working Dial Peer
 ```
 dial-peer voice 3000 voip
@@ -77,3 +76,8 @@ dial-peer voice 3002 voip
  dtmf-relay rtp-nte
  no vad
 ```
+
+## Verification
+## References
+
+
