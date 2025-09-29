@@ -27,6 +27,20 @@ This post is to demonstrate a way of blocking unsolicited calls at your gateway 
 This configuration can be implemented on Cisco routers running CUBE.
 
 ## Configuration
+First we need to define the number(s) we intend to block. Thing of the voice translation rules as an ACL (access control list) in which the list is assessed from the top-down format. The following configuration blocks *8675309* and then allows all other numbers.
+```
+voice translation-rule 3001
+ rule 1 reject /8675309/
+ rule 2 /.*/
+```
+If you have a longer list of numbers to block, an e164-pattern-map may be more efficent.
+```
+voice class e164-pattern-map 3001
+ url http://<server>/pattern-map.cfg
+```
+
+
+
 #Working Dial Peer
 ```
 dial-peer voice 3000 voip
