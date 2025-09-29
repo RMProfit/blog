@@ -31,7 +31,6 @@ First we need to define the number(s) we intend to block. Thing of the voice tra
 ```
 voice translation-rule 3001
  rule 1 reject /8675309/
- rule 2 /.*/
 ```
 If you have a longer list of numbers to block, an e164-pattern-map may be more efficent.
 ```
