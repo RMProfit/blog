@@ -116,7 +116,7 @@ dial-peer voice 3 voip
  no vad
 ```
 
-Note: `call-block` only applies to the dial-peer it's configured on. If multiple URI-matched dial-peers exist (for example, one per tenant or trunk), the `call-block` commands must be added to each dial-peer where blocking should apply — adding it to just one does not protect the others.
+Note: `call-block` only applies to the dial-peer it's configured on. If multiple URI-matched dial-peers exist (for example, one per tenant or trunk), the `call-block` commands must be added to each dial-peer where blocking should apply, adding it to just one does not protect the others.
 
 ## Verification
 
