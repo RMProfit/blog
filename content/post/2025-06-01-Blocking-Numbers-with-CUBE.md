@@ -31,7 +31,7 @@ First we need to define the number(s) we intend to block. Think of the voice tra
 voice translation-rule 3001
  rule 1 reject /8675309/
 ```
-If you have a longer list of numbers to block, an e164-pattern-map may be more efficent.
+If you have a longer list of numbers to block, an e164-pattern-map may be more efficent as opposed to single rule entries in the translation-rule.
 ```
 voice class e164-pattern-map 3001
  url http://<server>/pattern-map.cfg
@@ -39,7 +39,7 @@ voice class e164-pattern-map 3001
 
 
 
-**Working Dial Peer Prior to Blocking**
+**Basic Dial Peer Configuration Prior to Blocking**
 ```
 dial-peer voice 1 voip
  description SIP from ISP
@@ -49,7 +49,7 @@ dial-peer voice 1 voip
  dtmf-relay rtp-nte
  no vad
 ```
-
+In the configuration that follows, we are matching inbound calling numbers against our e164 pattern map file. After they match the dial-peer and before they are forwarded, the translation profile "Inbound-CallBlock" is engaged. This, in turn, references translation-rule 3002, which rejects all numbers with the wildcard match of ".*" This can be read as match "any digit repeating any number of times".
 
 ```
 voice translation-rule 3002
@@ -92,7 +92,7 @@ If your dial-peers already use SIP URI matching instead of ANI-based matching (f
 **Alternative: Blocking a Small List of Numbers on a URI-Matched Dial Peer**
 ```
 voice class uri 201 sip
- host ipv4:203.0.113.10
+ host ipv4:10.10.10.1
 ```
 
 ```
