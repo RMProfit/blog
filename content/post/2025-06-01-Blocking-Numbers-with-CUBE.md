@@ -31,7 +31,7 @@ First we need to define the number(s) we intend to block. Think of the voice tra
 voice translation-rule 3001
  rule 1 reject /8675309/
 ```
-If you have a longer list of numbers to block, an e164-pattern-map may be more efficent as opposed to single rule entries in the translation-rule.
+Alternatively, for a longer list of numbers, an e164-pattern-map is more efficient than individual reject rules. The main configuration below uses the pattern map.
 ```
 voice class e164-pattern-map 3001
  url http://<server>/pattern-map.cfg
@@ -87,9 +87,10 @@ dial-peer voice 2 voip
  no vad
 ```
 
+**Alternative: Blocking a Small List of Numbers on a URI-Matched Dial Peer**
+
 If your dial-peers already use SIP URI matching instead of ANI-based matching (for example, to separate SIP trunks or tenants), you can add call blocking to that existing dial-peer directly, without needing an e164-pattern-map or a second dial-peer. This fits a small, static list of numbers to block, since the reject patterns live inline in the translation-rule.
 
-**Alternative: Blocking a Small List of Numbers on a URI-Matched Dial Peer**
 ```
 voice class uri 201 sip
  host ipv4:10.10.10.1
@@ -119,9 +120,35 @@ dial-peer voice 3 voip
 Note: `call-block` only applies to the dial-peer it's configured on. If multiple URI-matched dial-peers exist (for example, one per tenant or trunk), the `call-block` commands must be added to each dial-peer where blocking should apply, adding it to just one does not protect the others.
 
 ## Verification
+You don't need a live call to confirm a number will be blocked. The `test voice translation-rule` command runs a number against a translation-rule and reports the result.
+
+A number that matches a reject rule:
+```
+Router# test voice translation-rule 3003 8675309
+ blocked on rule 1
+```
+
+A number that does not match any rule:
+```
+Router# test voice translation-rule 3003 5551234
+5551234 Didn't match with any of rules
+```
+
+To confirm the rules and profiles are configured as expected:
+```
+show voice translation-rule 3003
+show voice translation-profile URI-CallBlock
+```
+
+If you are using an e164-pattern-map, confirm the file loaded from the URL and check the number of entries:
+```
+show voice class e164-pattern-map 3001
+```
+Note: testing translation-rule 3002 isn't useful here, since `/.*/` blocks every number. In the e164-pattern-map design, the pattern map decides which numbers are blocked, so check the pattern map instead.
 
 ## References
 - [Understand IOS and IOS XE Call Routing](https://www.cisco.com/c/en/us/support/docs/voice/ip-telephony-voice-over-ip-voip/211306-In-Depth-Explanation-of-Cisco-IOS-and-IO.html)
+- [Determine Voice Translation Rules](https://www.cisco.com/c/en/us/support/docs/voice/call-routing-dial-plans/61083-voice-transla-rules.html)
 - [Configure Number Translation with Voice Translation Profiles (call-block feature)](https://www.cisco.com/c/en/us/support/docs/voice/call-routing-dial-plans/64020-number-voice-translation-profiles.html)
 - [Configuring Multiple Pattern Support on a Voice Dial Peer](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/voice/cube_fund/configuration/xe-3s/cube-fund-xe-3s-book/cube-fund-xe-3s-book_chapter_01000.pdf)
 - [Cisco IOS Voice Command Reference – show voice class e164-pattern-map](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/voice/vcr4/vcr4-cr-book/vcr-s9.html)
