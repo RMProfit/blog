@@ -6,8 +6,7 @@ tags= ["CUBE", "UC"]
 +++
 
 
-#Insert introduction here.
-Long ago, one may have recieved a spam call maybe once a month. Advancing technology introduced robo calling and number spoofing. The abilty to automate unsolicited calls for marekting or spam has increased the need for better posturing and filterin at the edge. This post will cover an easy way to block those calls from your network.   
+Long ago, one may have recieved a spam call maybe once a month. Advancing technology introduced robo calling and number spoofing. The abilty to automate unsolicited calls for marekting or spam has increased the need for better posturing and filtering at the edge. This post will cover an easy way to block those calls from your network.   
 <!--more-->  
 
 
@@ -20,13 +19,13 @@ Long ago, one may have recieved a spam call maybe once a month. Advancing techno
 - [References](#references)
 
 ## Overview
-This post is to demonstrate a way of blocking unsolicited calls at your gateway before they enter your network. While these calls can be blocked on CUCM with some strategic partition, calling search space, and route pattern configurations, the issue is at that point the traffic is already in your system and inside network. The overhead of dropping that traffic falls on your CUCM with a high probability of causing a DoS event to your users. A better solution is to block this traffic at the gateway before the calls enter your network.
+This post is to demonstrate a way of blocking unsolicited calls at your gateway before they enter your network. While these calls can be blocked on CUCM with some strategic partition, calling search space, and route pattern configurations, the traffic is already in your system and inside network. The overhead of dropping that traffic falls on your CUCM with a high probability of causing a DoS event to your users. A better solution is to block this traffic at the gateway before the calls enter your network.
 
 ## Components Used
 This configuration can be implemented on Cisco routers running CUBE.
 
 ## Configuration
-First we need to define the number(s) we intend to block. Think of the voice translation rules as an ACL (access control list) in which the list is assessed from the top-down format. The following configuration blocks *8675309*. Unlike ACLs, there is no implicit deny at the end. If a number does not match, it is simply not translated or, in our case, it is not blocked.
+First we need to define the number(s) we intend to block. Think of the voice translation rules as an ACL (access control list) in which the list is assessed from the top-down format. The following configuration blocks *8675309*. Unlike ACLs, there is no implicit deny at the end. If a number does not match, it is simply not translated or, in our case, it is not blocked. Additionally, the `/.*/` can be used to block all numbers/matches.
 ```
 voice translation-rule 3001
  rule 1 reject /8675309/
@@ -73,7 +72,7 @@ dial-peer voice 1 voip
  no vad
 ```
 
-We still need a dial-peer to match legitmate traffic destined for out network. The following dial-peer satisifes this requirement.
+We still need a dial-peer to match legitimate traffic destined for our network. The following dial-peer satisfies this requirement. The `.T` matches any calling number, but the pattern map on dial-peer 1 is a more specific match, so only numbers not in the pattern map land on dial-peer 2.
 
 **Working Dial Peer to Match Legitimate Traffic**
 ```
