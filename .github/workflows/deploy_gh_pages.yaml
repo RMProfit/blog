@@ -1,4 +1,4 @@
-### Repo --> Runner Setup --> Install Hugo 0.124.1 --> Verify Installed Hugo Version --> Build Site (Hugo + Theme)
+### Repo --> Runner Setup --> Install Hugo 0.167.0 --> Verify Installed Hugo Version --> Build Site (Hugo + Theme)
 ---
 name: Deploy Hugo site via GitHub Pages
 
@@ -23,7 +23,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.124.1"
+          hugo-version: "0.167.0"
           extended: true
 
       - name: Verify Hugo version (Flexible Check)
@@ -31,7 +31,7 @@ jobs:
           echo "Checking Hugo version..."
           hugo version
 
-          MINIMUM_REQUIRED_VERSION="0.124.1"
+          MINIMUM_REQUIRED_VERSION="0.146.2" # beautifulhugo v5 minimum
           INSTALLED_VERSION=$(hugo version | grep -oP '(?<=v)[0-9]+\.[0-9]+\.[0-9]+')
 
           echo "Installed Hugo version: $INSTALLED_VERSION"

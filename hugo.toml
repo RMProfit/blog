@@ -4,17 +4,29 @@ title = "Profit's Blog"
 # Using theme as git submodule 
 #theme = "beautifulhugo"
 # Or when using theme as hugo module
-theme = "github.com/halogenica/beautifulhugo"
-pygmentsStyle = "trac"
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-#pygmentsUseClassic = true
-#pygmentOptions = "linenos=inline"
+theme = "github.com/halogenica/beautifulhugo/v5"
 googleAnalytics = "G-XC9S15QS4V"
 
 [[module.imports]]
-    path = "github.com/halogenica/beautifulhugo"
+    path = "github.com/halogenica/beautifulhugo/v5"
+
+[markup.highlight]
+  noClasses = false
+
+# Tag-driven related posts (theme v5.1+ uses Hugo's related-content engine)
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "keywords"
+    weight = 80
+  [[related.indices]]
+    name = "date"
+    weight = 10
 
 [Params]
 homeTitle = "Profit's Blog" # Set a different text for the header on the home page
@@ -32,7 +44,6 @@ useHLJS = true
 socialShare = true
 #  delayDisqus = true
 showRelatedPosts = true
-cusdisID = "d88e9a4a-fb56-4b17-8d1e-107e72eff23b" # Get your App id from cusdis.com
 #  hideAuthor = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 disclaimerText = "The opinions expressed herein are my own personal opinions and do not represent my employer’s view in any way."

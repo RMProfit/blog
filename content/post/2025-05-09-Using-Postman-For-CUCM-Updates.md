@@ -125,6 +125,8 @@ The CSV is updated accordingly.
 
 
 ## Video Walkthrough
+{{< youtube TDrmnm_ZtiY >}}
+
 [Update CUCM Directory Numbers with Postman](https://youtu.be/TDrmnm_ZtiY?si=UU7f2-y4DA-lGETd)
 
 ## References
