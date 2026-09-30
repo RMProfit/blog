@@ -13,4 +13,22 @@
   [data-theme="dark"] footer div.disclaimer b {
     color: #ffe69c;
   }
+
+  /* Avatar: the logo is a portrait photo, so the theme's oval is taller than
+     it expects and its top ran off the page. Nudge it down, and push the
+     page heading down by the same amount so the two don't overlap. */
+  .navbar-custom .avatar-container {
+    bottom: -35px;
+  }
+  .intro-header {
+    margin-top: 90px; /* theme 80px + 10px */
+  }
+  @media only screen and (min-width: 768px) {
+    .navbar-custom .avatar-container {
+      bottom: -85px;
+    }
+    .intro-header {
+      margin-top: 165px; /* theme 130px + 35px */
+    }
+  }
 </style>
