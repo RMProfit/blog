@@ -6,7 +6,7 @@ tags= ["CUBE", "UC"]
 +++
 
 
-Long ago, one may have recieved a spam call maybe once a month. Advancing technology introduced robo calling and number spoofing. The abilty to automate unsolicited calls for marekting or spam has increased the need for better posturing and filtering at the edge. This post will cover an easy way to block those calls from your network.   
+Long ago, one may have received a spam call maybe once a month. Advancing technology introduced robo calling and number spoofing. The ability to automate unsolicited calls for marketing or spam has increased the need for better posturing and filtering at the edge. This post will cover an easy way to block those calls from your network.   
 <!--more-->  
 
 
